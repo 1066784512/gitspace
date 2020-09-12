@@ -2,8 +2,12 @@
   "iisSettings": {
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
+    "iis": {
+      "applicationUrl": "http://localhost/Lxk.Ucenter.Web.Host",
+      "sslPort": 0
+    },
     "iisExpress": {
-      "applicationUrl": "http://localhost:19001",
+      "applicationUrl": "http://localhost:21021/",
       "sslPort": 0
     }
   },
@@ -12,19 +16,9 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "http://localhost:19001/",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
-    },
-    "Lxk.Ucenter.Web.Host": {
-      "commandName": "Project",
-      "launchBrowser": true,
-      "launchUrl": "http://localhost:19001/",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      },
-      "applicationUrl": "http://localhost:19001/"
     }
   }
 }

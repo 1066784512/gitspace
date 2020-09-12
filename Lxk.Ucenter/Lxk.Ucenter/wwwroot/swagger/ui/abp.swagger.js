@@ -55,7 +55,7 @@ var abp = abp || {};
                     var result = responseJSON.result;
                     var expireDate = new Date(Date.now() + (result.expireInSeconds * 1000));
                     abp.auth.setToken(result.accessToken, expireDate);
-                    callback();   
+                    callback();
                 } else {
                     alert('Login failed !');
                 }
@@ -184,7 +184,7 @@ var abp = abp || {};
         var authorizeButton = document.createElement('button');
         authorizeButton.className = 'btn modal-btn auth authorize button';
         authorizeButton.innerText = 'Login';
-        authorizeButton.onclick = function() {
+        authorizeButton.onclick = function () {
             abp.swagger.login(loginCallback);
         };
         authBtnWrapper.appendChild(authorizeButton);
