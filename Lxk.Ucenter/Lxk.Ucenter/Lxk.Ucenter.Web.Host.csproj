@@ -11,12 +11,9 @@
     <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
     <LangVersion>7.2</LangVersion>
   </PropertyGroup>
-  <ItemGroup>
-    <Compile Remove="App_Data\Logs\**" />
-    <Content Remove="App_Data\Logs\**" />
-    <EmbeddedResource Remove="App_Data\Logs\**" />
-    <None Remove="App_Data\Logs\**" />
-  </ItemGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile></DocumentationFile>
+  </PropertyGroup>
   <ItemGroup>
     <Content Remove="wwwroot\swagger\ui\index.html" />
   </ItemGroup>
@@ -42,14 +39,12 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.5.1" />
   </ItemGroup>  
   <ItemGroup>
     <EmbeddedResource Include="wwwroot\swagger\ui\index.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-  </ItemGroup>  
-  <ItemGroup>
-    <Folder Include="App_Data\" />
   </ItemGroup>
 
 </Project>

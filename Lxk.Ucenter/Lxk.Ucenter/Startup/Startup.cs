@@ -105,7 +105,18 @@ namespace Lxk.Ucenter.Web.Host.Startup
 
             app.UseCors(_defaultCorsPolicyName); // Enable CORS!
 
-            app.UseStaticFiles();
+            app.UseStaticFiles();            
+
+            // Enable middleware to serve generated Swagger as a JSON endpoint
+            app.UseSwagger();
+            // Enable middleware to serve swagger-ui assets (HTML, JS, CSS etc.)
+            app.UseSwaggerUI(options =>
+            {
+                options.SwaggerEndpoint(_appConfiguration["App:ServerRootAddress"].EnsureEndsWith('/') + "swagger/v1/swagger.json", "Lxk API V1");
+                options.IndexStream = () => Assembly.GetExecutingAssembly()
+                    .GetManifestResourceStream("Lxk.Ucenter.Web.Host.wwwroot.swagger.ui.index.html");
+                options.DisplayRequestDuration();
+            }); // URL: /swagger
 
             app.UseRouting();
 
@@ -120,16 +131,6 @@ namespace Lxk.Ucenter.Web.Host.Startup
                 endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapControllerRoute("defaultWithArea", "{area}/{controller=Home}/{action=Index}/{id?}");
             });
-
-            // Enable middleware to serve generated Swagger as a JSON endpoint
-            app.UseSwagger();
-            // Enable middleware to serve swagger-ui assets (HTML, JS, CSS etc.)
-            app.UseSwaggerUI(options =>
-            {
-                options.SwaggerEndpoint(_appConfiguration["App:ServerRootAddress"].EnsureEndsWith('/') + "swagger/v1/swagger.json", "Lxk API V1");
-                options.IndexStream = () => Assembly.GetExecutingAssembly()
-                    .GetManifestResourceStream("Lxk.Ucenter.Web.Host.wwwroot.swagger.ui.index.html");
-            }); // URL: /swagger
         }
     }
 }

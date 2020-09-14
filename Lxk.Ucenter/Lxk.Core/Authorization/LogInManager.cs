@@ -7,13 +7,14 @@ using Abp.Domain.Repositories;
 using Abp.Domain.Uow;
 using Abp.Zero.Configuration;
 using Lxk.Ucenter.Core.Authorization.Roles;
+using Lxk.Ucenter.Core.Authorization.Users;
 using Lxk.Ucenter.Core.MultiTenancy;
 using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Lxk.Ucenter.Core.Authorization.Users
+namespace Lxk.Ucenter.Core.Authorization
 {
     public class LogInManager : AbpLogInManager<Tenant, Role, User>
     {

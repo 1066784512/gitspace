@@ -5,6 +5,7 @@ using Abp.Zero.Configuration;
 using Lxk.Ucenter.Core.Authorization.Roles;
 using Lxk.Ucenter.Core.Authorization.Users;
 using Lxk.Ucenter.Core.Configuration;
+using Lxk.Ucenter.Core.Localization;
 using Lxk.Ucenter.Core.MultiTenancy;
 
 namespace Lxk.Ucenter.Core
@@ -20,6 +21,8 @@ namespace Lxk.Ucenter.Core
             Configuration.Modules.Zero().EntityTypes.Tenant = typeof(Tenant);
             Configuration.Modules.Zero().EntityTypes.Role = typeof(Role);
             Configuration.Modules.Zero().EntityTypes.User = typeof(User);
+
+            LocalizationConfigurer.Configure(Configuration.Localization);
 
             // Enable this line to create a multi-tenant application.
             Configuration.MultiTenancy.IsEnabled = AppConsts.MultiTenancyEnabled;

@@ -5,6 +5,7 @@ using Abp.Runtime.Security;
 using Abp.UI;
 using Lxk.Ucenter.Application;
 using Lxk.Ucenter.Application.Authorization;
+using Lxk.Ucenter.Core.Authorization;
 using Lxk.Ucenter.Core.Authorization.Users;
 using Lxk.Ucenter.Core.MultiTenancy;
 using Lxk.Ucenter.Web.Core.Authentication.External;
