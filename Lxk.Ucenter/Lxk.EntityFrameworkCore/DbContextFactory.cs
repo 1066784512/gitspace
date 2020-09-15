@@ -1,5 +1,6 @@
-﻿using Lxk.Ucenter.Core;
-using Lxk.Ucenter.Core.Configuration;
+﻿using Lxk.Core;
+using Lxk.Core.Configuration;
+using Lxk.Core.Web;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;

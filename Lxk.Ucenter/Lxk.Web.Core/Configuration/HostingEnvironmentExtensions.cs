@@ -1,4 +1,4 @@
-﻿using Lxk.Ucenter.Core.Configuration;
+﻿using Lxk.Core.Configuration;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;

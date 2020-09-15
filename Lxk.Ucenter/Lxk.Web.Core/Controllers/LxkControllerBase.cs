@@ -1,6 +1,6 @@
 ﻿using Abp.AspNetCore.Mvc.Controllers;
 using Abp.IdentityFramework;
-using Lxk.Ucenter.Core;
+using Lxk.Core;
 using Microsoft.AspNetCore.Identity;
 
 namespace Lxk.Ucenter.Web.Core.Controllers

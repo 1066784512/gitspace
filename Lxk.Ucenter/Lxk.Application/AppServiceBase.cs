@@ -1,9 +1,9 @@
 ﻿using Abp.Application.Services;
 using Abp.IdentityFramework;
 using Abp.Runtime.Session;
-using Lxk.Ucenter.Core;
-using Lxk.Ucenter.Core.Authorization.Users;
-using Lxk.Ucenter.Core.MultiTenancy;
+using Lxk.Core;
+using Lxk.Core.Authorization.Users;
+using Lxk.Core.MultiTenancy;
 using Microsoft.AspNetCore.Identity;
 using System;
 using System.Threading.Tasks;

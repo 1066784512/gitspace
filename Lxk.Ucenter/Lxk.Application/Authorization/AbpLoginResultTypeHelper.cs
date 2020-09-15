@@ -2,7 +2,7 @@
 using Abp.Authorization;
 using Abp.Dependency;
 using Abp.UI;
-using Lxk.Ucenter.Core;
+using Lxk.Core;
 using System;
 using System.Collections.Generic;
 using System.Text;

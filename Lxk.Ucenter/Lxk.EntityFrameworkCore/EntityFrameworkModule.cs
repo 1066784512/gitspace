@@ -3,12 +3,12 @@ using Abp.EntityFrameworkCore;
 using Abp.EntityFrameworkCore.Configuration;
 using Abp.Modules;
 using Abp.Reflection.Extensions;
-using Lxk.Ucenter.Core;
+using Lxk.Core;
 
 namespace Lxk.Ucenter.EntityFrameworkCore
 {
     [DependsOn(
-        typeof(CoreModule),
+        typeof(LxkCoreModule),
         typeof(AbpEntityFrameworkCoreModule),
         typeof(AbpDapperModule))]
     public class EntityFrameworkModule : AbpModule

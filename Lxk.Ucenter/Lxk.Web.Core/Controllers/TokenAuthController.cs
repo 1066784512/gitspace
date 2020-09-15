@@ -3,11 +3,11 @@ using Abp.Authorization.Users;
 using Abp.MultiTenancy;
 using Abp.Runtime.Security;
 using Abp.UI;
+using Lxk.Core.Authorization;
+using Lxk.Core.Authorization.Users;
+using Lxk.Core.MultiTenancy;
 using Lxk.Ucenter.Application;
 using Lxk.Ucenter.Application.Authorization;
-using Lxk.Ucenter.Core.Authorization;
-using Lxk.Ucenter.Core.Authorization.Users;
-using Lxk.Ucenter.Core.MultiTenancy;
 using Lxk.Ucenter.Web.Core.Authentication.External;
 using Lxk.Ucenter.Web.Core.Authentication.JwtBearer;
 using Lxk.Ucenter.Web.Core.Models.TokenAuth;
@@ -142,7 +142,7 @@ namespace Lxk.Ucenter.Web.Core.Controllers
                 externalUser.Surname,
                 externalUser.EmailAddress,
                 externalUser.EmailAddress,
-                Ucenter.Core.Authorization.Users.User.CreateRandomPassword(),
+                Lxk.Core.Authorization.Users.User.CreateRandomPassword(),
                 true
             );
 

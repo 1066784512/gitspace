@@ -1,13 +1,13 @@
 ﻿using Abp.AutoMapper;
 using Abp.Modules;
 using Abp.Reflection.Extensions;
-using Lxk.Ucenter.Core;
-using Lxk.Ucenter.Core.Authorization;
+using Lxk.Core;
+using Lxk.Core.Authorization;
 
 namespace Lxk.Ucenter.Application
 {
     [DependsOn(
-        typeof(CoreModule),
+        typeof(LxkCoreModule),
         typeof(AbpAutoMapperModule))]
     public class ApplicationModule : AbpModule
     {

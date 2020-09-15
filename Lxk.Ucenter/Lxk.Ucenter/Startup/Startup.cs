@@ -12,13 +12,12 @@ using Abp.AspNetCore.Mvc.Antiforgery;
 using Abp.Castle.Logging.Log4Net;
 using Abp.Extensions;
 using Lxk.Ucenter.Web.Core.Configuration;
-using Lxk.Ucenter.Core.Identity;
 using Abp.AspNetCore.SignalR.Hubs;
 using Abp.Dependency;
 using Abp.Json;
 using Microsoft.OpenApi.Models;
 using Newtonsoft.Json.Serialization;
-
+using Lxk.Core.Identity;
 
 namespace Lxk.Ucenter.Web.Host.Startup
 {
@@ -101,6 +100,7 @@ namespace Lxk.Ucenter.Web.Host.Startup
 
         public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
         {
+            
             app.UseAbp(options => { options.UseAbpRequestLocalization = false; }); // Initializes ABP framework.
 
             app.UseCors(_defaultCorsPolicyName); // Enable CORS!

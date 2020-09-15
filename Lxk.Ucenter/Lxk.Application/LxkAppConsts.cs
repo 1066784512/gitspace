@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Lxk.Ucenter.Application
+﻿namespace Lxk.Ucenter.Application
 {
     public class LxkAppConsts
     {

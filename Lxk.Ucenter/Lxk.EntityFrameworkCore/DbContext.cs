@@ -1,8 +1,8 @@
 ﻿using Abp.EntityFrameworkCore;
 using Abp.Zero.EntityFrameworkCore;
-using Lxk.Ucenter.Core.Authorization.Roles;
-using Lxk.Ucenter.Core.Authorization.Users;
-using Lxk.Ucenter.Core.MultiTenancy;
+using Lxk.Core.Authorization.Roles;
+using Lxk.Core.Authorization.Users;
+using Lxk.Core.MultiTenancy;
 using Microsoft.EntityFrameworkCore;
 
 namespace Lxk.Ucenter.EntityFrameworkCore
