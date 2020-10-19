@@ -4,8 +4,6 @@ using Abp.Dependency;
 using Abp.UI;
 using Lxk.Core;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Lxk.Ucenter.Application.Authorization
 {

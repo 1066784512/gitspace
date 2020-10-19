@@ -100,23 +100,11 @@ namespace Lxk.Ucenter.Web.Host.Startup
 
         public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
         {
-            
             app.UseAbp(options => { options.UseAbpRequestLocalization = false; }); // Initializes ABP framework.
 
             app.UseCors(_defaultCorsPolicyName); // Enable CORS!
 
-            app.UseStaticFiles();            
-
-            // Enable middleware to serve generated Swagger as a JSON endpoint
-            app.UseSwagger();
-            // Enable middleware to serve swagger-ui assets (HTML, JS, CSS etc.)
-            app.UseSwaggerUI(options =>
-            {
-                options.SwaggerEndpoint(_appConfiguration["App:ServerRootAddress"].EnsureEndsWith('/') + "swagger/v1/swagger.json", "Lxk API V1");
-                options.IndexStream = () => Assembly.GetExecutingAssembly()
-                    .GetManifestResourceStream("Lxk.Ucenter.Web.Host.wwwroot.swagger.ui.index.html");
-                options.DisplayRequestDuration();
-            }); // URL: /swagger
+            app.UseStaticFiles();
 
             app.UseRouting();
 
@@ -124,6 +112,16 @@ namespace Lxk.Ucenter.Web.Host.Startup
 
             app.UseAbpRequestLocalization();
 
+            // Enable middleware to serve generated Swagger as a JSON endpoint
+            app.UseSwagger();
+            // Enable middleware to serve swagger-ui assets (HTML, JS, CSS etc.)
+
+            app.UseSwaggerUI(options =>
+            {
+                options.SwaggerEndpoint(_appConfiguration["App:ServerRootAddress"].EnsureEndsWith('/') + "swagger/v1/swagger.json", "Lxk API V1");
+                options.IndexStream = () => Assembly.GetExecutingAssembly()
+                    .GetManifestResourceStream("Lxk.Ucenter.Web.Host.wwwroot.swagger.ui.index.html");
+            }); // URL: /swagger
 
             app.UseEndpoints(endpoints =>
             {
@@ -131,6 +129,8 @@ namespace Lxk.Ucenter.Web.Host.Startup
                 endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapControllerRoute("defaultWithArea", "{area}/{controller=Home}/{action=Index}/{id?}");
             });
+
+            
         }
     }
 }
