@@ -19,6 +19,11 @@ namespace Lxk.Ucenter.Application.Authorization.Accounts
             _userRegistrationManager = userRegistrationManager;
         }
 
+        /// <summary>
+        /// 租户
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         public async Task<IsTenantAvailableOutput> IsTenantAvailable(IsTenantAvailableInput input)
         {
             var tenant = await TenantManager.FindByTenancyNameAsync(input.TenancyName);
